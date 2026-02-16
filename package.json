@@ -1,0 +1,13 @@
+{
+  "name": "sound-party",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Kid-friendly sound grid that triggers Alexa via Homey",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}

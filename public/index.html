@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sound Party">
+  <link rel="manifest" href="manifest.json">
+  <title>Sound Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sound Party</h1>
+    <button id="settings-btn" aria-label="Settings">&#9881;</button>
+  </header>
+
+  <div id="settings-panel" class="hidden">
+    <label for="speaker-select">Högtalare:</label>
+    <select id="speaker-select">
+      <option value="">Laddar...</option>
+    </select>
+  </div>
+
+  <nav id="category-tabs"></nav>
+
+  <main id="grid-container"></main>
+
+  <div id="status" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
