@@ -71,6 +71,7 @@
         { "label": "Val", "emoji": "🐋", "command": "sound like a whale" },
         { "label": "Säl", "emoji": "🦭", "command": "sound like a seal" },
         { "label": "Pingvin", "emoji": "🐧", "command": "sound like a penguin" },
+        { "label": "Haj", "emoji": "🦈", "command": "sound like a shark" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -93,15 +94,23 @@
         { "label": "Flygplan", "emoji": "✈️", "command": "sound like an airplane" },
         { "label": "Brandbil", "emoji": "🚒", "command": "sound like a fire truck" },
         { "label": "Motorcykel", "emoji": "🏍️", "command": "sound like a motorcycle" },
-        { "label": "Cykel", "emoji": "🚲", "command": "sound like a bicycle" },
         { "label": "Bil", "emoji": "🚗", "command": "sound like a car" },
         { "label": "Buss", "emoji": "🚌", "command": "sound like a bus" },
         { "label": "Helikopter", "emoji": "🚁", "command": "sound like a helicopter" },
-        { "label": "Färja", "emoji": "⛴️", "command": "sound like a ferry" },
-        { "label": "Lastbil", "emoji": "🚛", "command": "sound like a truck" },
         { "label": "Traktor", "emoji": "🚜", "command": "sound like a tractor" },
         { "label": "Tåg", "emoji": "🚂", "command": "sound like a train" },
         { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "fantasy",
+      "label": "🦄 Fantasy",
+      "color": "#7C4DFF",
+      "items": [
+        { "label": "Enhörning", "emoji": "🦄", "command": "sound like a unicorn" },
+        { "label": "Dinosaurie", "emoji": "🦕", "command": "sound like a dinosaur" },
+        { "label": "Spöke", "emoji": "👻", "command": "sound like a ghost" },
+        { "label": "Utomjording", "emoji": "👽", "command": "sound like an alien" }
       ]
     },
     {
