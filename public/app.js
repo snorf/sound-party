@@ -5,10 +5,15 @@
   const settingsPanel = document.getElementById('settings-panel');
   const speakerSelect = document.getElementById('speaker-select');
   const statusEl = document.getElementById('status');
+  const overlayEl = document.getElementById('overlay');
+  const overlayEmoji = document.getElementById('overlay-emoji');
+  const overlayLabel = document.getElementById('overlay-label');
+  const overlayHint = document.getElementById('overlay-hint');
 
   let data = null;
   let activeCategory = 0;
   let busy = false;
+  let canDismiss = false;
 
   // --- Load data ---
   try {
@@ -90,6 +95,29 @@
     });
   }
 
+  // --- Overlay ---
+  function showOverlay(emoji, label) {
+    canDismiss = false;
+    overlayEmoji.textContent = emoji;
+    overlayLabel.textContent = label;
+    overlayHint.classList.add('hidden');
+    overlayEl.classList.remove('hidden');
+  }
+
+  function enableDismiss() {
+    canDismiss = true;
+    overlayHint.classList.remove('hidden');
+  }
+
+  function hideOverlay() {
+    overlayEl.classList.add('hidden');
+    busy = false;
+  }
+
+  overlayEl.addEventListener('click', () => {
+    if (canDismiss) hideOverlay();
+  });
+
   // --- Tile tap handler ---
   async function handleTap(tile, category, item) {
     if (busy) return;
@@ -101,30 +129,35 @@
     tile.classList.add('pop');
 
     // Resolve mystery
-    let command;
+    let command, emoji, label;
     if (item.mystery) {
       const realItems = category.items.filter((it) => !it.mystery);
       const pick = realItems[Math.floor(Math.random() * realItems.length)];
       command = pick.command;
-      showStatus(pick.emoji + ' ' + pick.label);
+      emoji = pick.emoji;
+      label = pick.label;
     } else {
       command = item.command;
+      emoji = item.emoji;
+      label = item.label;
     }
 
+    showOverlay(emoji, label);
+
     try {
+      const speaker = speakerSelect.value;
       const resp = await fetch('/api/play', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ command }),
+        body: JSON.stringify({ command, speaker }),
       });
       if (!resp.ok) throw new Error('Kunde inte spela ljud');
+      // Wait a bit for Alexa to finish speaking, then allow dismiss
+      setTimeout(enableDismiss, 3000);
     } catch (err) {
       showStatus('Fel: ' + err.message);
+      hideOverlay();
     }
-
-    setTimeout(() => {
-      busy = false;
-    }, 600);
   }
 
   // --- Status toast ---

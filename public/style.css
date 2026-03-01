@@ -123,10 +123,9 @@ header h1 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
   display: none;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
 }
 
 .grid.active {
@@ -215,15 +214,78 @@ header h1 {
   pointer-events: none;
 }
 
-/* Responsive: 4 columns on wider screens */
+/* Overlay */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+#overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#overlay-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+#overlay-emoji {
+  font-size: 8rem;
+  line-height: 1;
+  animation: overlay-bounce 1s ease infinite;
+}
+
+#overlay-label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#overlay-hint {
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-top: 16px;
+}
+
+#overlay-hint.hidden {
+  visibility: hidden;
+}
+
+@keyframes overlay-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Larger tiles on bigger screens */
 @media (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 600px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
 
   .tile-emoji {
     font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .tile-emoji {
+    font-size: 4rem;
   }
 }

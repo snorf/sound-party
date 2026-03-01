@@ -20,11 +20,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Play a sound: set variable then trigger flow
 app.post('/api/play', async (req, res) => {
-  const { command } = req.body;
+  const { command, speaker } = req.body;
   if (!command) return res.status(400).json({ error: 'Missing command' });
 
   try {
-    // 1. Set the Logic variable
+    // 1. Set the command variable
     const varResp = await fetch(
       `${HOMEY_BASE}/manager/logic/variable/${VARIABLE_ID}`,
       {
@@ -35,12 +35,13 @@ app.post('/api/play', async (req, res) => {
     );
     if (!varResp.ok) throw new Error(`Variable update failed (${varResp.status})`);
 
-    // 2. Trigger the flow
+    // 2. Trigger the advanced flow with speaker as text tag
     const flowResp = await fetch(
-      `${HOMEY_BASE}/manager/flow/flow/${FLOW_ID}/trigger`,
+      `${HOMEY_BASE}/manager/flow/advancedflow/${FLOW_ID}/trigger`,
       {
         method: 'POST',
         headers: homeyHeaders,
+        body: JSON.stringify({ tokens: { text: speaker || '' } }),
       }
     );
     if (!flowResp.ok) throw new Error(`Flow trigger failed (${flowResp.status})`);

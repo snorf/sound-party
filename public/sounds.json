@@ -1,47 +1,93 @@
 {
   "categories": [
     {
-      "id": "animals",
-      "label": "Djur",
+      "id": "farm",
+      "label": "🐄 Bondgård",
       "color": "#4CAF50",
       "items": [
-        { "label": "Får", "emoji": "🐑", "command": "sound like a sheep" },
-        { "label": "Anka", "emoji": "🦆", "command": "sound like a duck" },
-        { "label": "Häst", "emoji": "🐴", "command": "sound like a horse" },
-        { "label": "Groda", "emoji": "🐸", "command": "sound like a frog" },
-        { "label": "Gris", "emoji": "🐷", "command": "sound like a pig" },
         { "label": "Ko", "emoji": "🐄", "command": "sound like a cow" },
+        { "label": "Får", "emoji": "🐑", "command": "sound like a sheep" },
+        { "label": "Häst", "emoji": "🐴", "command": "sound like a horse" },
+        { "label": "Gris", "emoji": "🐷", "command": "sound like a pig" },
         { "label": "Tupp", "emoji": "🐓", "command": "sound like a rooster" },
         { "label": "Get", "emoji": "🐐", "command": "sound like a goat" },
-        { "label": "Fågel", "emoji": "🐦", "command": "sound like a bird" },
         { "label": "Åsna", "emoji": "🫏", "command": "sound like a donkey" },
-        { "label": "Katt", "emoji": "🐱", "command": "sound like a cat" },
+        { "label": "Anka", "emoji": "🦆", "command": "sound like a duck" },
+        { "label": "Kalkon", "emoji": "🦃", "command": "sound like a turkey" },
+        { "label": "Tjur", "emoji": "🐂", "command": "sound like a bull" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
     {
-      "id": "wild",
-      "label": "Vilda djur",
+      "id": "domestic",
+      "label": "🐶 Husdjur",
+      "color": "#9C27B0",
+      "items": [
+        { "label": "Hund", "emoji": "🐶", "command": "sound like a dog" },
+        { "label": "Katt", "emoji": "🐱", "command": "sound like a cat" },
+        { "label": "Papegoja", "emoji": "🦜", "command": "sound like a parrot" },
+        { "label": "Groda", "emoji": "🐸", "command": "sound like a frog" },
+        { "label": "Fågel", "emoji": "🐦", "command": "sound like a bird" },
+        { "label": "Uggla", "emoji": "🦉", "command": "sound like an owl" },
+        { "label": "Bi", "emoji": "🐝", "command": "sound like a bee" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "jungle",
+      "label": "🌴 Djungel",
       "color": "#FF9800",
       "items": [
-        { "label": "Elefant", "emoji": "🐘", "command": "sound like an elephant" },
-        { "label": "Känguru", "emoji": "🦘", "command": "sound like a kangaroo" },
         { "label": "Apa", "emoji": "🐒", "command": "sound like a monkey" },
+        { "label": "Tiger", "emoji": "🐯", "command": "sound like a tiger" },
+        { "label": "Känguru", "emoji": "🦘", "command": "sound like a kangaroo" },
+        { "label": "Krokodil", "emoji": "🐊", "command": "sound like a crocodile" },
+        { "label": "Flodhäst", "emoji": "🦛", "command": "sound like a hippo" },
+        { "label": "Sköldpadda", "emoji": "🐢", "command": "sound like a turtle" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "savanna",
+      "label": "🌍 Savann",
+      "color": "#FF5722",
+      "items": [
         { "label": "Lejon", "emoji": "🦁", "command": "sound like a lion" },
+        { "label": "Elefant", "emoji": "🐘", "command": "sound like an elephant" },
         { "label": "Zebra", "emoji": "🦓", "command": "sound like a zebra" },
-        { "label": "Delfin", "emoji": "🐬", "command": "sound like a dolphin" },
-        { "label": "Säl", "emoji": "🦭", "command": "sound like a seal" },
-        { "label": "Björn", "emoji": "🐻", "command": "sound like a bear" },
-        { "label": "Kamel", "emoji": "🐫", "command": "sound like a camel" },
-        { "label": "Puma", "emoji": "🐆", "command": "sound like a cougar" },
-        { "label": "Varg", "emoji": "🐺", "command": "sound like a wolf" },
         { "label": "Giraff", "emoji": "🦒", "command": "sound like a giraffe" },
+        { "label": "Noshörning", "emoji": "🦏", "command": "sound like a rhino" },
+        { "label": "Struts", "emoji": "🪶", "command": "sound like an ostrich" },
+        { "label": "Kamel", "emoji": "🐫", "command": "sound like a camel" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "ocean",
+      "label": "🌊 Havsdjur",
+      "color": "#00BCD4",
+      "items": [
+        { "label": "Delfin", "emoji": "🐬", "command": "sound like a dolphin" },
+        { "label": "Val", "emoji": "🐋", "command": "sound like a whale" },
+        { "label": "Säl", "emoji": "🦭", "command": "sound like a seal" },
+        { "label": "Pingvin", "emoji": "🐧", "command": "sound like a penguin" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "woodland",
+      "label": "🌲 Skog",
+      "color": "#795548",
+      "items": [
+        { "label": "Björn", "emoji": "🐻", "command": "sound like a bear" },
+        { "label": "Varg", "emoji": "🐺", "command": "sound like a wolf" },
+        { "label": "Puma", "emoji": "🐆", "command": "sound like a cougar" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
     {
       "id": "vehicles",
-      "label": "Fordon",
+      "label": "🚗 Fordon",
       "color": "#2196F3",
       "items": [
         { "label": "Flygplan", "emoji": "✈️", "command": "sound like an airplane" },
@@ -49,7 +95,6 @@
         { "label": "Motorcykel", "emoji": "🏍️", "command": "sound like a motorcycle" },
         { "label": "Cykel", "emoji": "🚲", "command": "sound like a bicycle" },
         { "label": "Bil", "emoji": "🚗", "command": "sound like a car" },
-        { "label": "Häst och vagn", "emoji": "🐴", "command": "sound like a horse and carriage" },
         { "label": "Buss", "emoji": "🚌", "command": "sound like a bus" },
         { "label": "Helikopter", "emoji": "🚁", "command": "sound like a helicopter" },
         { "label": "Färja", "emoji": "⛴️", "command": "sound like a ferry" },
@@ -57,6 +102,14 @@
         { "label": "Traktor", "emoji": "🚜", "command": "sound like a tractor" },
         { "label": "Tåg", "emoji": "🚂", "command": "sound like a train" },
         { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "funny",
+      "label": "🎈 Roligt",
+      "color": "#E91E63",
+      "items": [
+        { "label": "Prutt", "emoji": "💩", "command": "can you fart" }
       ]
     }
   ]
