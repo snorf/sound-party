@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 const HOMEY_BASE = `http://${process.env.HOMEY_IP}/api`;
 const HOMEY_TOKEN = process.env.HOMEY_TOKEN;
 const VARIABLE_ID = process.env.VARIABLE_ID;
+const SPEAKER_VARIABLE_ID = process.env.SPEAKER_VARIABLE_ID;
 const FLOW_ID = process.env.FLOW_ID;
 
 const homeyHeaders = {
@@ -35,13 +36,25 @@ app.post('/api/play', async (req, res) => {
     );
     if (!varResp.ok) throw new Error(`Variable update failed (${varResp.status})`);
 
-    // 2. Trigger the flow with speaker as text tag
+    // 2. Set the speaker variable
+    if (SPEAKER_VARIABLE_ID && speaker) {
+      const spkResp = await fetch(
+        `${HOMEY_BASE}/manager/logic/variable/${SPEAKER_VARIABLE_ID}`,
+        {
+          method: 'PUT',
+          headers: homeyHeaders,
+          body: JSON.stringify({ value: speaker }),
+        }
+      );
+      if (!spkResp.ok) throw new Error(`Speaker variable update failed (${spkResp.status})`);
+    }
+
+    // 3. Trigger the flow
     const flowResp = await fetch(
       `${HOMEY_BASE}/manager/flow/flow/${FLOW_ID}/trigger`,
       {
         method: 'POST',
         headers: homeyHeaders,
-        body: JSON.stringify({ tokens: { text: speaker || '' } }),
       }
     );
     if (!flowResp.ok) throw new Error(`Flow trigger failed (${flowResp.status})`);
