@@ -35,9 +35,9 @@ app.post('/api/play', async (req, res) => {
     );
     if (!varResp.ok) throw new Error(`Variable update failed (${varResp.status})`);
 
-    // 2. Trigger the advanced flow with speaker as text tag
+    // 2. Trigger the flow with speaker as text tag
     const flowResp = await fetch(
-      `${HOMEY_BASE}/manager/flow/advancedflow/${FLOW_ID}/trigger`,
+      `${HOMEY_BASE}/manager/flow/flow/${FLOW_ID}/trigger`,
       {
         method: 'POST',
         headers: homeyHeaders,
