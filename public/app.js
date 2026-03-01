@@ -58,6 +58,10 @@
     settingsPanel.classList.toggle('hidden');
   });
 
+  speakerSelect.addEventListener('change', () => {
+    localStorage.setItem('selectedSpeaker', speakerSelect.value);
+  });
+
   // --- Load speakers ---
   try {
     const resp = await fetch('/api/devices');
@@ -70,10 +74,12 @@
       if (speakers.length === 0) {
         speakerSelect.innerHTML = '<option value="">Inga högtalare hittade</option>';
       } else {
+        const saved = localStorage.getItem('selectedSpeaker');
         speakers.forEach((s) => {
           const opt = document.createElement('option');
           opt.value = s.id;
           opt.textContent = s.name;
+          if (s.id === saved) opt.selected = true;
           speakerSelect.appendChild(opt);
         });
       }
@@ -145,7 +151,7 @@
     showOverlay(emoji, label);
 
     try {
-      const speaker = speakerSelect.value;
+      const speaker = speakerSelect.options[speakerSelect.selectedIndex]?.text || '';
       const resp = await fetch('/api/play', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
