@@ -23,7 +23,6 @@
       "label": "🐶 Husdjur",
       "color": "#9C27B0",
       "items": [
-        { "label": "Hund", "emoji": "🐶", "command": "sound like a dog" },
         { "label": "Katt", "emoji": "🐱", "command": "sound like a cat" },
         { "label": "Papegoja", "emoji": "🦜", "command": "sound like a parrot" },
         { "label": "Groda", "emoji": "🐸", "command": "sound like a frog" },
