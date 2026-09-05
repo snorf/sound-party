@@ -57,7 +57,6 @@
         { "label": "Jaguar", "emoji": "🐆", "command": "sound like a jaguar" },
         { "label": "Panter", "emoji": "🐈‍⬛", "command": "sound like a panther" },
         { "label": "Koala", "emoji": "🐨", "command": "sound like a koala" },
-        { "label": "Sengångare", "emoji": "🦥", "command": "sound like a sloth" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
