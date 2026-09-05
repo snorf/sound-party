@@ -9,6 +9,8 @@
   const overlayEmoji = document.getElementById('overlay-emoji');
   const overlayLabel = document.getElementById('overlay-label');
   const overlayHint = document.getElementById('overlay-hint');
+  const overlayText = document.getElementById('overlay-text');
+  const defaultOverlayText = overlayText.textContent;
 
   let data = null;
   let activeCategory = 0;
@@ -135,19 +137,22 @@
     tile.classList.add('pop');
 
     // Resolve mystery
-    let command, emoji, label;
+    let command, emoji, label, wait;
     if (item.mystery) {
       const realItems = category.items.filter((it) => !it.mystery);
       const pick = realItems[Math.floor(Math.random() * realItems.length)];
       command = pick.command;
       emoji = pick.emoji;
       label = pick.label;
+      wait = pick.wait;
     } else {
       command = item.command;
       emoji = item.emoji;
       label = item.label;
+      wait = item.wait;
     }
 
+    overlayText.textContent = category.overlayText || defaultOverlayText;
     showOverlay(emoji, label);
 
     try {
@@ -158,8 +163,8 @@
         body: JSON.stringify({ command, speaker }),
       });
       if (!resp.ok) throw new Error('Kunde inte spela ljud');
-      // Wait a bit for Alexa to finish speaking, then allow dismiss
-      setTimeout(enableDismiss, 3000);
+      // Wait for Alexa to finish speaking, then allow dismiss
+      setTimeout(enableDismiss, (wait || 3) * 1000);
     } catch (err) {
       showStatus('Fel: ' + err.message);
       hideOverlay();

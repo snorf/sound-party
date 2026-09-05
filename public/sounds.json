@@ -15,6 +15,11 @@
         { "label": "Anka", "emoji": "🦆", "command": "sound like a duck" },
         { "label": "Kalkon", "emoji": "🦃", "command": "sound like a turkey" },
         { "label": "Tjur", "emoji": "🐂", "command": "sound like a bull" },
+        { "label": "Höna", "emoji": "🐔", "command": "sound like a chicken" },
+        { "label": "Gås", "emoji": "🪿", "command": "sound like a goose" },
+        { "label": "Lama", "emoji": "🦙", "command": "sound like a llama" },
+        { "label": "Kanin", "emoji": "🐰", "command": "sound like a rabbit" },
+        { "label": "Hamster", "emoji": "🐹", "command": "sound like a hamster" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -29,6 +34,9 @@
         { "label": "Fågel", "emoji": "🐦", "command": "sound like a bird" },
         { "label": "Uggla", "emoji": "🦉", "command": "sound like an owl" },
         { "label": "Bi", "emoji": "🐝", "command": "sound like a bee" },
+        { "label": "Kattunge", "emoji": "🐈", "command": "sound like a kitten" },
+        { "label": "Mus", "emoji": "🐭", "command": "sound like a mouse" },
+        { "label": "Råtta", "emoji": "🐀", "command": "sound like a rat" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -43,6 +51,13 @@
         { "label": "Krokodil", "emoji": "🐊", "command": "sound like a crocodile" },
         { "label": "Flodhäst", "emoji": "🦛", "command": "sound like a hippo" },
         { "label": "Sköldpadda", "emoji": "🐢", "command": "sound like a turtle" },
+        { "label": "Gorilla", "emoji": "🦍", "command": "sound like a gorilla" },
+        { "label": "Schimpans", "emoji": "🐵", "command": "sound like a chimpanzee" },
+        { "label": "Orangutang", "emoji": "🦧", "command": "sound like an orangutan" },
+        { "label": "Jaguar", "emoji": "🐆", "command": "sound like a jaguar" },
+        { "label": "Panter", "emoji": "🐈‍⬛", "command": "sound like a panther" },
+        { "label": "Koala", "emoji": "🐨", "command": "sound like a koala" },
+        { "label": "Sengångare", "emoji": "🦥", "command": "sound like a sloth" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -58,6 +73,9 @@
         { "label": "Noshörning", "emoji": "🦏", "command": "sound like a rhino" },
         { "label": "Struts", "emoji": "🪶", "command": "sound like an ostrich" },
         { "label": "Kamel", "emoji": "🐫", "command": "sound like a camel" },
+        { "label": "Gepard", "emoji": "🐆", "command": "sound like a cheetah" },
+        { "label": "Gnu", "emoji": "🐃", "command": "sound like a wildebeest" },
+        { "label": "Gam", "emoji": "🦅", "command": "sound like a vulture" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -71,6 +89,9 @@
         { "label": "Säl", "emoji": "🦭", "command": "sound like a seal" },
         { "label": "Pingvin", "emoji": "🐧", "command": "sound like a penguin" },
         { "label": "Haj", "emoji": "🦈", "command": "sound like a shark" },
+        { "label": "Späckhuggare", "emoji": "🐳", "command": "sound like an orca" },
+        { "label": "Bläckfisk", "emoji": "🐙", "command": "sound like an octopus" },
+        { "label": "Mås", "emoji": "🐦", "command": "sound like a seagull" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -82,6 +103,39 @@
         { "label": "Björn", "emoji": "🐻", "command": "sound like a bear" },
         { "label": "Varg", "emoji": "🐺", "command": "sound like a wolf" },
         { "label": "Puma", "emoji": "🐆", "command": "sound like a cougar" },
+        { "label": "Räv", "emoji": "🦊", "command": "sound like a fox" },
+        { "label": "Älg", "emoji": "🫎", "command": "sound like a moose" },
+        { "label": "Tvättbjörn", "emoji": "🦝", "command": "sound like a raccoon" },
+        { "label": "Ekorre", "emoji": "🐿️", "command": "sound like a squirrel" },
+        { "label": "Fladdermus", "emoji": "🦇", "command": "sound like a bat" },
+        { "label": "Igelkott", "emoji": "🦔", "command": "sound like a hedgehog" },
+        { "label": "Utter", "emoji": "🦦", "command": "sound like an otter" },
+        { "label": "Lodjur", "emoji": "🐈", "command": "sound like a bobcat" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "birds",
+      "label": "🐦 Fåglar",
+      "color": "#3F51B5",
+      "items": [
+        { "label": "Örn", "emoji": "🦅", "command": "sound like an eagle" },
+        { "label": "Kråka", "emoji": "🐦‍⬛", "command": "sound like a crow" },
+        { "label": "Påfågel", "emoji": "🦚", "command": "sound like a peacock" },
+        { "label": "Svan", "emoji": "🦢", "command": "sound like a swan" },
+        { "label": "Gök", "emoji": "🐦", "command": "sound like a cuckoo" },
+        { "label": "?", "emoji": "❓", "mystery": true }
+      ]
+    },
+    {
+      "id": "critters",
+      "label": "🦎 Kryp",
+      "color": "#8BC34A",
+      "items": [
+        { "label": "Alligator", "emoji": "🐊", "command": "sound like an alligator" },
+        { "label": "Gecko", "emoji": "🦎", "command": "sound like a gecko" },
+        { "label": "Mygga", "emoji": "🦟", "command": "sound like a mosquito" },
+        { "label": "Syrsa", "emoji": "🦗", "command": "sound like a cricket" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -98,6 +152,9 @@
         { "label": "Helikopter", "emoji": "🚁", "command": "sound like a helicopter" },
         { "label": "Traktor", "emoji": "🚜", "command": "sound like a tractor" },
         { "label": "Tåg", "emoji": "🚂", "command": "sound like a train" },
+        { "label": "Ambulans", "emoji": "🚑", "command": "sound like an ambulance" },
+        { "label": "Polisbil", "emoji": "🚓", "command": "sound like a police car" },
+        { "label": "Tunnelbana", "emoji": "🚇", "command": "sound like a subway" },
         { "label": "?", "emoji": "❓", "mystery": true }
       ]
     },
@@ -109,15 +166,33 @@
         { "label": "Enhörning", "emoji": "🦄", "command": "sound like a unicorn" },
         { "label": "Dinosaurie", "emoji": "🦕", "command": "sound like a dinosaur" },
         { "label": "Spöke", "emoji": "👻", "command": "sound like a ghost" },
-        { "label": "Utomjording", "emoji": "👽", "command": "sound like an alien" }
+        { "label": "Utomjording", "emoji": "👽", "command": "sound like an alien" },
+        { "label": "T-rex", "emoji": "🦖", "command": "sound like a t-rex" },
+        { "label": "Drake", "emoji": "🐉", "command": "sound like a dragon" }
       ]
     },
     {
       "id": "funny",
       "label": "🎈 Roligt",
       "color": "#E91E63",
+      "overlayText": "Här kommer",
       "items": [
-        { "label": "Prutt", "emoji": "💩", "command": "can you fart" }
+        { "label": "Prutt", "emoji": "💩", "command": "can you fart" },
+        { "label": "Slumpprutt", "emoji": "🎲", "command": "do a random fart" },
+        { "label": "Julprutt", "emoji": "🎄", "command": "do a christmas fart" },
+        { "label": "Pipig prutt", "emoji": "🐭", "command": "do a squeaky fart" },
+        { "label": "Blöt prutt", "emoji": "💦", "command": "do a wet fart" },
+        { "label": "Kryddig prutt", "emoji": "🌶️", "command": "do a spicy fart" },
+        { "label": "Ketchupprutt", "emoji": "🍅", "command": "do a ketchup fart" },
+        { "label": "Koprutt", "emoji": "🐄", "command": "do a cow fart" },
+        { "label": "Pytteprutt", "emoji": "🤏", "command": "do a tiny fart" },
+        { "label": "Tyst prutt", "emoji": "🤫", "command": "do a silent fart" },
+        { "label": "Bajsig prutt", "emoji": "🚽", "command": "do a pooey fart" },
+        { "label": "Svår prutt", "emoji": "😣", "command": "do a difficult fart" },
+        { "label": "17 pruttar i rad", "emoji": "🔁", "command": "fart seventeen times in a row", "wait": 30 },
+        { "label": "Nedräkning 30 sek", "emoji": "⏱️", "command": "do a thirty second fart countdown", "wait": 35 },
+        { "label": "Prutt-rap", "emoji": "🎤", "command": "rap about farts", "wait": 15 },
+        { "label": "Beatbox", "emoji": "🎧", "command": "beatbox", "wait": 10 }
       ]
     }
   ]
